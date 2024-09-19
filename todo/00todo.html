@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class = "container shadow mx-auto mt-5 p-5 w-70">
+        <h1>나의 할일 관리 - 장형준</h1>
+        <div class="input-group">
+            <input id="item" class="form-control" type="text" placeholder="새로운 할일을 입력">
+            <button id="newBtn" type="button" class="btn btn-info" onclick="addItem()">생성하기</button>
+        </div>
+        <ul id = "todolist"></ul>
+    </div>
+    <!-- <script src="00todo.js"></script> -->
+</body>
+</html>
+
+
+
+<script>
+    function xbtnclick(e){
+        pnode = e.target.parentNode;
+        lsit = document.getElementById('todolist')
+        list.removeChild(pnode)
+    }
+    function addItem(){
+    // alert('addItem함수 호출됨')
+    todo = document.getElementById('item')
+    // console.log(todo.value)
+    list = document.getElementById('todolist')
+
+    listitem = document.createElement('li')
+    listitem.innerText = todo.value
+    
+    
+    xbtn = document.createElement('button')
+    xbtn.innerHTML = "지우기"
+    xbtn.onclick = xbtnclick;
+    listitem.appendChild(xbtn)
+    
+    list.appendChild(listitem)
+
+    todo.value = ""
+    todo.focus()
+}
+</script>
