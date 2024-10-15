@@ -20,9 +20,8 @@ function talk(){
         contentType: "application/json; charset=utf-8"
     }).done( function(response){
         console.log(response)
-        alert("이순신장군은 훌륭하지")
+        alert("충무이순신장군은 훌륭하지")
     }).fail(
-
     )
 }
 
